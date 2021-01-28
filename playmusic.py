@@ -35,74 +35,70 @@ def directorychooser():
  
     pygame.mixer.init()
     pygame.mixer.music.load(listofsongs[0])
-    #pygame.mixer.music.play()
+    pygame.mixer.music.play()
  
 directorychooser()
  
-def updatelabel():
-    global index
-    global songname
-    v.set(realnames[index])
-    #return songname
+# def updatelabel():
+#     global index
+#     global songname
+#     v.set(realnames[index])
+#     # return songname
  
  
  
-def nextsong(event):
-    global index
-    index += 1
-    pygame.mixer.music.load(listofsongs[index])
-    pygame.mixer.music.play()
-    updatelabel()
+# def nextsong(event):
+#     global index
+#     index += 1
+#     pygame.mixer.music.load(listofsongs[index])
+#     pygame.mixer.music.play()
+#     # updatelabel()
  
-def prevsong(event):
-    global index
-    index -= 1
-    pygame.mixer.music.load(listofsongs[index])
-    pygame.mixer.music.play()
-    updatelabel()
- 
- 
-def stopsong(event):
-    pygame.mixer.music.stop()
-    v.set("")
-    #return songname
+# def prevsong(event):
+#     global index
+#     index -= 1
+#     pygame.mixer.music.load(listofsongs[index])
+#     pygame.mixer.music.play()
+#     updatelabel()
  
  
-label = Label(root,text='Music Player')
-label.pack()
- 
-listbox = Listbox(root)
-listbox.pack()
- 
-#listofsongs.reverse()
-realnames.reverse()
- 
-for items in realnames:
-    listbox.insert(0,items)
- 
-realnames.reverse()
-#listofsongs.reverse()
+# def stopsong(event):
+#     pygame.mixer.music.stop()
+#     v.set("")
+#     #return songname
  
  
-nextbutton = Button(root,text = 'Next Song')
-nextbutton.pack()
+# label = Label(root,text='Music Player')
+# label.pack()
  
-previousbutton = Button(root,text = 'Previous Song')
-previousbutton.pack()
+# listbox = Listbox(root)
+# listbox.pack()
  
-stopbutton = Button(root,text='Stop Music')
-stopbutton.pack()
+# # #listofsongs.reverse()
+# # realnames.reverse()
  
+# for items in realnames:
+#     listbox.insert(0,items)
  
-nextbutton.bind("<Button-1>",nextsong)
-previousbutton.bind("<Button-1>",prevsong)
-stopbutton.bind("<Button-1>",stopsong)
- 
-songlabel.pack()
- 
+# realnames.reverse()
+# #listofsongs.reverse()
  
  
+# nextbutton = Button(root,text = 'Next Song')
+# nextbutton.pack()
  
+# previousbutton = Button(root,text = 'Previous Song')
+# previousbutton.pack()
+ 
+# stopbutton = Button(root,text='Stop Music')
+# stopbutton.pack()
+ 
+ 
+# nextbutton.bind("<Button-1>",nextsong)
+# previousbutton.bind("<Button-1>",prevsong)
+# stopbutton.bind("<Button-1>",stopsong)
+ 
+# songlabel.pack()
  
  
  
@@ -112,7 +108,11 @@ songlabel.pack()
  
  
  
-root.mainloop()
+ 
+ 
+ 
+ 
+# root.mainloop()
  
  
  
